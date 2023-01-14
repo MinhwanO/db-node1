@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://minhwan:12345@cluster0.nrsed4p.mongodb.net/?retr
 
 app.get('/', (req, res) => res.send('안녕하세요'))
 
-app.post('/post', (req, res) => {
+app.post('/api/users/post', (req, res) => {
     const posting = new Post(req.body)
 
     posting.save((err, postInfo) => {
@@ -27,7 +27,7 @@ app.post('/post', (req, res) => {
     })
 })
 
-app.get('/hh', (req, res) => {
+app.get('/api/users/hh', (req, res) => {
     Post.find((err, data) => {
         if (err) return res.json({success: false, err})
         return res.status(200).json(data)
