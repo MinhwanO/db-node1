@@ -5,7 +5,7 @@ const { Post } = require('./post')
 const cors = require('cors')
 
 app.use(cors({
-    origin: true,
+    origin: "http://localhost:3000",
     credentials: true,
 }))
 
