@@ -9,6 +9,9 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+server.keepAliveTimeout = 61 * 1000
+server.headersTimeout = 65 * 1000
+
 
 const mongoose = require('mongoose')
 mongoose.connect('mongodb+srv://minhwan:12345@cluster0.nrsed4p.mongodb.net/?retryWrites=true&w=majority')
