@@ -16,7 +16,7 @@ mongoose.connect('mongodb+srv://minhwan:12345@cluster0.nrsed4p.mongodb.net/?retr
     .catch(() => console.log(err))
 
 
-app.get('/', (req, res) => res.send('안녕하세요'))
+app.get('/', (req, res) => res.send('안녕하세요~~'))
 
 app.post('/api/users/post', (req, res) => {
     const posting = new Post(req.body)
