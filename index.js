@@ -29,6 +29,8 @@ app.post('/api/users/post', (req, res) => {
 })
 
 app.get('/api/users/hh', (req, res) => {
+    console.log('?')
+    
     Post.find((err, data) => {
         if (err) return res.json({success: false, err})
         return res.status(200).json(data)
